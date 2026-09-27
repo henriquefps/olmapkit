@@ -30,15 +30,6 @@ Any static server works (`npx serve .`, for example). Opening the file directly 
 
 URL parameter: `?s=prefill|new|occupied|edit` picks the scenario.
 
-### Deploying the demo
-
-The demo is deployed as a Cloudflare Worker with static assets (see [`wrangler.jsonc`](wrangler.jsonc)). `npm run build` puts only what the browser needs (`demo/`, `src/` and a `/ → /demo/` redirect) in `dist/`, and `npm run deploy` builds and runs `wrangler deploy`.
-
-```bash
-npm install
-npm run deploy
-```
-
 ## How it is packaged
 
 The component is written as the body of an **OutSystems JavaScript node**. It reads its inputs from `$parameters` and reports back through `$actions`.
