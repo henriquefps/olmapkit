@@ -115,7 +115,7 @@ The editor also exposes `window.clearDrawPolygon()`, which clears the drawing wi
 
 ## Credits
 
-Developed at **[Axians](https://www.axians.com/)**.
+Created by **[Henrique Silva](https://github.com/henriquefps)**, Solutions Specialist at **Axians Low Code**.
 
 - Original OpenLayers map component (base layers, WMS, polygons, clusters, tooltips): the Axians team.
 - Touch-first drawing and editing, live useful-area computation, demo and tests: [Henrique Silva](https://github.com/henriquefps).
