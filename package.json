@@ -1,0 +1,15 @@
+{
+  "name": "openlayers-touch-polygon-editor",
+  "private": true,
+  "description": "Touch-first polygon drawing and editing for OpenLayers maps, with live useful-area computation",
+  "license": "MIT",
+  "scripts": {
+    "build": "sh scripts/build-site.sh",
+    "serve": "python3 -m http.server 8765",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.141.0"
+  }
+}

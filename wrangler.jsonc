@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "openlayers-touch-polygon-editor",
+  "compatibility_date": "2026-09-25",
+  // Static demo only: dist/ is assembled by `npm run build` (demo/ + src/ + _redirects)
+  "assets": {
+    "directory": "./dist"
+  },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "polygon-editor.hfps.dev", "custom_domain": true }
+  ]
+}

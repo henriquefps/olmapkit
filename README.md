@@ -17,6 +17,8 @@ A polygon drawing and editing experience for [OpenLayers](https://openlayers.org
 
 ## Try it
 
+**Live demo: <https://polygon-editor.hfps.dev>** (best on a phone or tablet).
+
 A static demo lives in [`demo/`](demo/). It runs the component with sample data and logs every event it sends.
 
 ```bash
@@ -27,6 +29,15 @@ python3 -m http.server 8765        # from the repository root
 Any static server works (`npx serve .`, for example). Opening the file directly does not work, because the demo loads the component with `fetch`. To test on a phone, bind to `0.0.0.0` and open `http://<your-computer-ip>:8765/demo/`.
 
 URL parameter: `?s=prefill|new|occupied|edit` picks the scenario.
+
+### Deploying the demo
+
+The demo is deployed as a Cloudflare Worker with static assets (see [`wrangler.jsonc`](wrangler.jsonc)). `npm run build` puts only what the browser needs (`demo/`, `src/` and a `/ → /demo/` redirect) in `dist/`, and `npm run deploy` builds and runs `wrangler deploy`.
+
+```bash
+npm install
+npm run deploy
+```
 
 ## How it is packaged
 
