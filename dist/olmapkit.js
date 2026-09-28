@@ -1,4 +1,4 @@
-/*! OLMapKit 0.1.0 | MIT | Henrique Silva, Axians Low Code | https://github.com/henriquefps/openlayers-touch-polygon-editor */
+/*! OLMapKit 0.1.0 | MIT | Henrique Silva, Axians Low Code | https://github.com/henriquefps/olmapkit */
 var OLMapKit = (() => {
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;

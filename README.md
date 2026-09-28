@@ -2,7 +2,7 @@
 
 A **touch-first map component for [OpenLayers](https://openlayers.org/)**: markers, layers from any GIS server, polygon drawing and editing, measuring, address search, import/export, printing, GPS tracking, offline maps, data visualisation and satellite imagery. One script, a JSON-in / events-out API, and ready to wrap as an **OutSystems** component.
 
-**Live demo: <https://polygon-editor.hfps.dev>**, best on a phone or tablet. It has nine scenarios, English and Portuguese, and an event log.
+**Live demo: <https://olmapkit.hfps.dev>**, best on a phone or tablet. It has nine scenarios, English and Portuguese, and an event log.
 
 <p align="center">
   <img src="docs/img/markers.jpg" alt="Markers with custom icons and a detail card" width="640">

@@ -3,7 +3,7 @@ import { build } from 'esbuild';
 import { readFileSync } from 'node:fs';
 
 const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url)));
-const banner = `/*! OLMapKit ${pkg.version} | MIT | Henrique Silva, Axians Low Code | https://github.com/henriquefps/openlayers-touch-polygon-editor */`;
+const banner = `/*! OLMapKit ${pkg.version} | MIT | Henrique Silva, Axians Low Code | https://github.com/henriquefps/olmapkit */`;
 const common = {
     entryPoints: ['src/index.js'],
     bundle: true,

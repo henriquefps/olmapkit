@@ -11,7 +11,7 @@ Add these as **Script** resources of a library module (download them, or use the
 1. `ol.js` 10.6.0 and `ol.css`: <https://cdn.jsdelivr.net/npm/ol@10.6.0/dist/ol.js>, <https://cdn.jsdelivr.net/npm/ol@10.6.0/ol.css>
 2. `jsts.min.js` 2.7.1 (drawing and geometry operations)
 3. Optional: `proj4.js` (other projections, rasters), `geotiff.js` 2.1.3 (COG rasters), `shp.min.js` (zipped shapefiles), `jszip.min.js` (KMZ), `jspdf.umd.min.js` (PDF print)
-4. `olmapkit.min.js` from [`dist/`](../dist) (or `https://cdn.jsdelivr.net/gh/henriquefps/openlayers-touch-polygon-editor@<tag>/dist/olmapkit.min.js`)
+4. `olmapkit.min.js` from [`dist/`](../dist) (or `https://cdn.jsdelivr.net/gh/henriquefps/olmapkit@<tag>/dist/olmapkit.min.js`)
 
 ### A `Map` block
 
