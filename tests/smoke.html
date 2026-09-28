@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLMapKit smoke test</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.6.0/ol.css">
+<script src="https://cdn.jsdelivr.net/npm/ol@10.6.0/dist/ol.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsts@2.7.1/dist/jsts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proj4@2.12.1/dist/proj4.js"></script>
+<script src="../dist/olmapkit.js"></script>
+<style>html,body{margin:0;height:100%}#map{position:absolute;inset:0}</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+window.events = [];
+window.kit = OLMapKit.create('map', {
+  center: [-8.61, 41.15], zoom: 14, basemap: 'streets',
+  controls: { search: true, measure: true, locate: true, print: true, import: true, select: true, offline: true, fitAll: true },
+  onEvent: (type, payload) => window.events.push([type, payload])
+});
+</script>
+</body>
+</html>

@@ -1,15 +1,24 @@
 {
-  "name": "openlayers-touch-polygon-editor",
+  "name": "olmapkit",
+  "version": "0.1.0",
   "private": true,
-  "description": "Touch-first polygon drawing and editing for OpenLayers maps, with live useful-area computation",
+  "description": "Touch-first map component for OpenLayers: markers, layers, drawing and editing, measuring, search, import/export, print, geolocation, offline, data viz and satellite rasters. OutSystems-ready.",
   "license": "MIT",
+  "author": "Henrique Silva (Axians Low Code)",
+  "type": "module",
+  "main": "dist/olmapkit.js",
   "scripts": {
-    "build": "sh scripts/build-site.sh",
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "test": "node --test tests/*.test.js",
+    "site": "npm run build && sh scripts/build-site.sh",
     "serve": "python3 -m http.server 8765",
-    "deploy": "npm run build && wrangler deploy",
-    "preview": "npm run build && wrangler dev"
+    "deploy": "npm run site && wrangler deploy",
+    "preview": "npm run site && wrangler dev"
   },
   "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsts": "^2.7.1",
     "wrangler": "^4.141.0"
   }
 }

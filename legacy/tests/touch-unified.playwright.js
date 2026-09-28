@@ -32,7 +32,7 @@ async (page) => {
     ring: (await ringPx()).length
   });
   const out = {};
-  await p.goto('http://localhost:8765/demo/?s=occupied'); await sleep(1800);
+  await p.goto('http://localhost:8765/legacy/sandbox/?s=occupied'); await sleep(1800);
   const [a, b, c, d] = await px([[-120.5015, 36.9018], [-120.4990, 36.9012], [-120.4992, 36.8992], [-120.5018, 36.8994]]);
 
   // 1) 2 pontos: nada enviado ainda; arrastar o 2º ponto move-o (não cria um 3º) e o mapa não se mexe

@@ -1,13 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "openlayers-touch-polygon-editor",
+  "name": "olmapkit",
   "compatibility_date": "2026-09-25",
-  // Static demo only: dist/ is assembled by `npm run build` (demo/ + src/ + _redirects)
+  // Static demo only: site/ is assembled by `npm run site` (demo/ + dist/ + legacy/ + _redirects)
   "assets": {
-    "directory": "./dist"
+    "directory": "./site"
   },
   "workers_dev": true,
   "routes": [
-    { "pattern": "polygon-editor.hfps.dev", "custom_domain": true }
+    { "pattern": "olmapkit.hfps.dev", "custom_domain": true }
   ]
 }
