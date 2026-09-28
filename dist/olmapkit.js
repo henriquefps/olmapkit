@@ -95,6 +95,7 @@ var OLMapKit = (() => {
 .olmk-msg.is-error{background:#f8d7da;color:#842029;border-color:#f1aeb5}
 .olmk-msg:empty{display:none}
 .olmk-bar{position:absolute;left:8px;right:8px;bottom:28px;z-index:5;display:flex;flex-direction:column;gap:6px;align-items:center;pointer-events:none}
+.olmk-narrow .olmk-bar{right:56px}
 .olmk-hint{background:rgba(255,255,255,.94);color:var(--olmk-fg);border-radius:8px;padding:6px 10px;font-size:12px;text-align:center;max-width:520px;box-shadow:var(--olmk-shadow)}
 .olmk-hint:empty{display:none}
 .olmk-buttons{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;pointer-events:auto}
@@ -103,7 +104,7 @@ var OLMapKit = (() => {
 .olmk-buttons button.is-danger{background:var(--olmk-danger);color:#fff}
 .olmk-buttons button:disabled{opacity:.45;cursor:default}
 .olmk-buttons button[hidden]{display:none}
-.olmk-panel{position:absolute;z-index:8;top:8px;right:56px;bottom:28px;width:320px;max-width:calc(100% - 72px);display:flex;flex-direction:column;background:var(--olmk-bg);color:var(--olmk-fg);border-radius:var(--olmk-radius);box-shadow:0 4px 20px rgba(0,0,0,.25);overflow:hidden;font-size:14px}
+.olmk-panel{position:absolute;pointer-events:auto;z-index:8;top:8px;right:56px;bottom:28px;width:320px;max-width:calc(100% - 72px);display:flex;flex-direction:column;background:var(--olmk-bg);color:var(--olmk-fg);border-radius:var(--olmk-radius);box-shadow:0 4px 20px rgba(0,0,0,.25);overflow:hidden;font-size:14px}
 .olmk-narrow .olmk-panel{top:auto;left:0;right:0;bottom:0;width:auto;max-width:none;max-height:62%;border-radius:16px 16px 0 0}
 .olmk-panel-head{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 16px;border-bottom:1px solid var(--olmk-border);font-weight:700}
 .olmk-panel-head button{border:0;background:none;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--olmk-fg)}
@@ -136,7 +137,7 @@ var OLMapKit = (() => {
 .olmk-tooltip{background:rgba(29,35,48,.9);color:#fff;border-radius:6px;padding:4px 8px;font-size:12px;white-space:nowrap;pointer-events:none;transform:translateY(-8px)}
 .olmk-measure-tip{background:rgba(0,0,0,.74);color:#fff;border-radius:6px;padding:3px 8px;font-size:12px;white-space:nowrap;pointer-events:none}
 .olmk-toast{position:absolute;left:50%;bottom:72px;transform:translateX(-50%);z-index:9;background:rgba(29,35,48,.92);color:#fff;border-radius:8px;padding:8px 14px;font-size:13px;max-width:calc(100% - 32px);text-align:center;pointer-events:none;transition:opacity .2s}
-.olmk-search{position:absolute;z-index:7;top:8px;left:56px;width:340px;max-width:calc(100% - 120px)}
+.olmk-search{position:absolute;pointer-events:auto;z-index:7;top:8px;left:56px;width:340px;max-width:calc(100% - 120px)}
 .olmk-search form{display:flex;background:var(--olmk-bg);border-radius:var(--olmk-radius);box-shadow:var(--olmk-shadow);overflow:hidden}
 .olmk-search input{flex:1;min-width:0;border:0;padding:0 12px;height:40px;font:14px var(--olmk-font);outline:none;background:transparent;color:var(--olmk-fg)}
 .olmk-search button{border:0;background:none;width:40px;height:40px;cursor:pointer;color:var(--olmk-muted);display:flex;align-items:center;justify-content:center}
@@ -149,7 +150,7 @@ var OLMapKit = (() => {
 .olmk-swipe{position:absolute;z-index:4;top:0;bottom:0;width:0;pointer-events:none}
 .olmk-swipe:before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:2px;background:#fff;box-shadow:0 0 4px rgba(0,0,0,.5)}
 .olmk-swipe-handle{position:absolute;top:50%;left:-20px;width:40px;height:40px;margin-top:-20px;border-radius:50%;background:var(--olmk-bg);box-shadow:var(--olmk-shadow);pointer-events:auto;cursor:ew-resize;display:flex;align-items:center;justify-content:center;touch-action:none;font-weight:700;color:var(--olmk-fg);user-select:none}
-.olmk-time{position:absolute;z-index:5;left:50%;transform:translateX(-50%);bottom:28px;width:420px;max-width:calc(100% - 16px);display:flex;align-items:center;gap:10px;background:var(--olmk-bg);border-radius:var(--olmk-radius);box-shadow:var(--olmk-shadow);padding:6px 12px}
+.olmk-time{position:absolute;pointer-events:auto;z-index:5;left:50%;transform:translateX(-50%);bottom:28px;width:420px;max-width:calc(100% - 16px);display:flex;align-items:center;gap:10px;background:var(--olmk-bg);border-radius:var(--olmk-radius);box-shadow:var(--olmk-shadow);padding:6px 12px}
 .olmk-time button{border:0;background:var(--olmk-primary);color:var(--olmk-primary-contrast);width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none}
 .olmk-time button svg{width:20px;height:20px;fill:currentColor}
 .olmk-time input{flex:1;accent-color:var(--olmk-primary)}

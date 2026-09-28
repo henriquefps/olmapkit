@@ -2,7 +2,7 @@
 // it opens a mobile context, sends real touch events through CDP and returns a JSON report.
 // Serve the repository root first (npm run serve) and adjust BASE if needed.
 async (page) => {
-  const BASE = 'http://127.0.0.1:8777';
+  const BASE = 'http://localhost:8765';
   const ctx = await page.context().browser().newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 });
   const p = await ctx.newPage();
   const errors = [];
