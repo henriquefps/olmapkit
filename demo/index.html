@@ -2,51 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Touch Polygon Editor · Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>OLMapKit Demo</title>
+  <meta name="description" content="Touch-first map component for OpenLayers: markers, layers, drawing, measuring, search, import/export, print, geolocation, offline, data viz and satellite imagery.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232e7d32' d='M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.6.0/ol.css">
   <script src="https://cdn.jsdelivr.net/npm/ol@10.6.0/dist/ol.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jsts@2.7.1/dist/jsts.min.js"></script>
-  <link rel="stylesheet" href="harness.css">
+  <script src="https://cdn.jsdelivr.net/npm/proj4@2.12.1/dist/proj4.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/geotiff@2.1.3/dist-browser/geotiff.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/shpjs@6.1.0/dist/shp.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" defer></script>
+  <script src="../dist/olmapkit.js"></script>
+  <link rel="stylesheet" href="app.css">
 </head>
 <body>
-  <header class="toolbar">
-    <strong>Touch Polygon Editor · demo</strong>
-    <label>Scenario
-      <select id="scenario"></select>
-    </label>
-    <button id="btn-reload" type="button">Reload map</button>
-    <details class="flags">
-      <summary>Parameters</summary>
-      <div id="flags"></div>
-    </details>
-  </header>
-
-  <main class="layout">
-    <section class="map-column">
-      <div class="help-tag" id="help-tag"></div>
-      <div id="map" class="map">
-        <div id="tooltip" class="tooltip"></div>
-      </div>
-
-      <!-- Simulated consumer screen: area + Save / Clear -->
-      <div class="consumer">
-        <div class="area">Area: <span id="area-ha">0</span> ha</div>
-        <div class="actions">
-          <button id="btn-clear" type="button">Clear drawing</button>
-          <button id="btn-save" type="button" class="primary">Save</button>
+  <div class="app">
+    <aside class="side">
+      <header class="brand">
+        <div>
+          <h1>OLMapKit</h1>
+          <p data-t="tagline"></p>
         </div>
-      </div>
-      <div id="feedback" class="feedback" hidden></div>
-    </section>
+        <div class="brand-tools">
+          <select id="lang" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+          </select>
+          <a class="gh" href="https://github.com/henriquefps/olmapkit" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+        </div>
+      </header>
 
-    <aside class="log-column">
-      <h2>Events / $actions</h2>
-      <button id="btn-clear-log" type="button">Clear log</button>
-      <ol id="log" class="log"></ol>
+      <nav class="scenarios" id="scenarios" aria-label="Scenarios"></nav>
+
+      <section class="panel" id="panel" aria-live="polite"></section>
+
+      <details class="log" id="log-box">
+        <summary><span data-t="events"></span> <span class="count" id="log-count">0</span></summary>
+        <div class="log-tools">
+          <button type="button" id="log-clear" data-t="clearLog"></button>
+        </div>
+        <ol id="log"></ol>
+      </details>
+
+      <footer class="credits" data-t-html="credits"></footer>
     </aside>
-  </main>
 
-  <script src="harness.js"></script>
+    <main class="stage">
+      <div id="map" class="map"></div>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

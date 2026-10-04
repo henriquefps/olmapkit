@@ -200,7 +200,7 @@
     // Same order as the host would run it: reset the previous map, then init
     async function initMap() {
         const [resetCode, initCode] = await Promise.all([
-            loadCode('../src/reset_environment.js'), loadCode('../src/init_map.js')
+            loadCode('../reset_environment.js'), loadCode('../init_map.js')
         ]);
 
         new Function('$parameters', resetCode)({ MapDiv: 'map' });

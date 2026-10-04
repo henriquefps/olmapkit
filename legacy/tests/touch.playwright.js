@@ -37,7 +37,7 @@ async (page) => {
   }));
 
   const out = {};
-  await p.goto('http://localhost:8765/demo/?s=occupied');
+  await p.goto('http://localhost:8765/legacy/sandbox/?s=occupied');
   await sleep(1800);
 
   // 1) Arrasto com um dedo no modo desenho: mapa NÃO se move, ponto colocado onde o dedo soltou
