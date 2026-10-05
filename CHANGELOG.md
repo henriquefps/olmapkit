@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Project icon (`docs/img/icon.svg`, `icon-light.svg`, `icon.png`) and GitHub social preview image (`docs/img/social-preview.png`) in the hfps style; the demo favicon, apple-touch-icon and PWA icons are generated from it by `scripts/build-icons.mjs`.
+
 ## 0.1.0 (2026-09-28)
 
 First release of OLMapKit, the modular successor of the touch polygon editor.
