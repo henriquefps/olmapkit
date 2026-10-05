@@ -1,4 +1,4 @@
-# OLMapKit
+<h1><img src="demo/icon.svg" alt="" width="32" height="32" align="absmiddle"> OLMapKit</h1>
 
 A **touch-first map component for [OpenLayers](https://openlayers.org/)**: markers, layers from any GIS server, polygon drawing and editing, measuring, address search, import/export, printing, GPS tracking, offline maps, data visualisation and satellite imagery. One script, a JSON-in / events-out API, and ready to wrap as an **OutSystems** component.
 
